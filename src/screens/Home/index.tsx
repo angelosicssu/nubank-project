@@ -1,6 +1,6 @@
 import React from "react";
 import { SafeAreaView, View, Text, TouchableOpacity, ScrollView } from "react-native";
-import { styles } from "./style";
+import { styles } from "./styles";
 import { Carrossel } from "../../components/carrossel";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import Carousel from 'react-native-snap-carousel';
@@ -13,11 +13,6 @@ const data = [
 ]
 
 export function Home() {
-
-    const renderItem = ({ item }: { item: { name: string } }) => (
-        <Carrossel name={item.name} />
-    );
-
     return(
         <SafeAreaView style={styles.container}>
             <View style={styles.account}>
@@ -49,18 +44,18 @@ export function Home() {
                             <Icon name="arrow-right-thin" size={25} color={'#A1A1A1'}/>
                         </TouchableOpacity>
                     </View>
-                    <Text style={styles.textSaldo}>R$ 1.356,98</Text>
+                    <Text style={styles.textMoney}>R$ 1.356,98</Text>
                 </View>
+
                 
                 <View style={styles.carrossel}>
-                    <Carousel
-                        data={data}
-                        renderItem={renderItem}
-                        sliderWidth={300}
-                        itemWidth={100}
-                        loop={true}
-                    />
+                    <Carrossel/>
                 </View>
+                
+                <View>
+                    
+                </View>
+
             </View>
         </SafeAreaView>
     )

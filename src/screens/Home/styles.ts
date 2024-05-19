@@ -5,10 +5,11 @@ export const styles = StyleSheet.create({
         flex: 1
     },
     account: {
-        backgroundColor: '#660EEB',
+        backgroundColor: '#6954DE',
         padding: '3%',
-        paddingTop: '10%',
-        gap: 20
+        paddingTop: '12%',
+        paddingBottom: '5%',
+        gap: 10,
     },
     profile: {
         flexDirection: 'row',
@@ -43,10 +44,11 @@ export const styles = StyleSheet.create({
         fontSize: 16,
         fontWeight: 'bold'
     },
+    textMoney: {
+        fontSize: 20,
+        fontWeight: 'bold'
+    },
     carrossel: {
-        justifyContent: 'center',
-        alignItems: 'center',
-        flexDirection: 'row',
-        gap: 20
+        paddingTop: '7%'
     }
 })
