@@ -16,15 +16,13 @@ export function News() {
 
                 <TouchableOpacity style={styles.containerNews}>
                     <Text style={styles.textNews}>
-                        Novidade! Conheça a ferramenta de Controle de Gastos da 
-                        Nubank
+                        <Text style={styles.textColor}>Você pediu e elas chegaram:</Text> conheça as Caixinhas!
                     </Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.containerNews}>
                     <Text style={styles.textNews}>
-                        Novidade! Conheça a ferramenta de Controle de Gastos da 
-                        Nubank
+                        Dúvida em como funciona o empréstimo na Nubank? <Text style={styles.textColor}>Clique aqui!</Text>
                     </Text>
                 </TouchableOpacity>
 
