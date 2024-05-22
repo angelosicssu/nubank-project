@@ -5,9 +5,6 @@ import { styles } from "../Money/styles";
 import { Cards } from "../../components/Cards";
 
 export function Money() {
-
-    const [clicked, setCliked] = useState(false)
-
     return(
         <SafeAreaView>
             <View style={styles.account}>

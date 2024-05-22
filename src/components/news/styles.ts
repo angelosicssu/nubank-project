@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
         gap: 20
     },
     containerNews: {
-        backgroundColor: '#F0F1F5',
+        backgroundColor: '#E1E2E6',
         width: 300,
         height: 100,
         justifyContent: 'center',
