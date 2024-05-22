@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
         gap: 7
     },
     containerIcon: {
-        backgroundColor: '#F0F1F5',
+        backgroundColor: '#E1E2E6',
         padding: '3%',
         justifyContent: 'center',
         alignItems: 'center',

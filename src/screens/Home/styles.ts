@@ -64,7 +64,7 @@ export const styles = StyleSheet.create({
     cards: {
         flexDirection: 'row',
         alignItems: 'center',
-        backgroundColor: '#F0F1F5',
+        backgroundColor: '#E1E2E6',
         width: '90%',
         padding: '5%',
         borderRadius: 20,
@@ -76,7 +76,7 @@ export const styles = StyleSheet.create({
     divider: {
         height: 1,
         width: '100%',
-        backgroundColor: '#F0F1F5'
+        backgroundColor: '#E1E2E6'
     },
     containerCreditCard: {
         padding: '5%',
@@ -110,7 +110,7 @@ export const styles = StyleSheet.create({
         fontWeight: 'bold'
     },
     buttonParcelar: {
-        backgroundColor: '#F0F1F5',
+        backgroundColor: '#E1E2E6',
         width: 170,
         padding: '4%',
         justifyContent: 'center',
@@ -133,7 +133,7 @@ export const styles = StyleSheet.create({
     buttonPagamentos: {
         flexDirection: 'row',
         alignItems: 'center',
-        backgroundColor: '#F0F1F5',
+        backgroundColor: '#E1E2E6',
         padding: '5%',
         borderRadius: 20,
         gap: 10

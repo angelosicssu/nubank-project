@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { SafeAreaView, View, Text, TouchableOpacity, ScrollView } from "react-native";
 import { styles } from "./styles";
-import { Carrossel } from "../../components/carrossel";
+import { Carrossel } from "../../components/Carrossel";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import IconF from 'react-native-vector-icons/FontAwesome';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import { News } from "../../components/news";
+import { News } from "../../components/News";
 
 export function Home() {
 
@@ -127,6 +127,8 @@ export function Home() {
                             <Text style={styles.textButtonPagamentos}>Assistente de Pagamentos</Text>
                         </TouchableOpacity>
                     </View>
+
+                     <View style={styles.divider} />
 
                 </View>
             </ScrollView>
