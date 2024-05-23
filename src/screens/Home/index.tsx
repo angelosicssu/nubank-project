@@ -12,12 +12,14 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 export function Home() {
 
-    //AQUIS
+    //AQUI ESTOU FAZENDO UM USE-STATE PARA VERIFICAR SE O ÍCONE DE OLHO FOI CLICADO OU NÃO
     const [clicked, setCliked] = useState(false);
     const [click, setClick] = useState(false);
 
+    //AQUI É A REFERÊNCIA DO MODAL
     const modalizeRef = useRef<Modalize>(null);
 
+    //FUNÇÃO PARA QUE QUANDO O USUÁRIO CLICAR NO ÍCONE APAREÇA O MODAL
     function onOpen() {
         modalizeRef.current?.open();
     }
@@ -27,6 +29,7 @@ export function Home() {
         <SafeAreaView style={styles.container}>
             <ScrollView showsVerticalScrollIndicator={false}>
 
+                {/* AQUI É O 'HEADER', ONDE TEM O PERFIL, EMAIL E ETC. */}
                 <View style={styles.account}>
                     <View style={styles.profile}>
                         <Icon name="account-outline" size={25} color={'#F0F1F5'} style={styles.iconProfile}/>
@@ -55,6 +58,9 @@ export function Home() {
                     <Text style={styles.textProfile}>Olá, Ângelo</Text>
                 </View>
 
+                {/* TÉRMINO DO 'HEADER' */}
+
+                {/* AQUI É O RESTO DO CÓDIGO */}
                 <View>
                     <View style={styles.money}>
                         <View style={styles.saldo}>
@@ -63,6 +69,7 @@ export function Home() {
                                 <MaterialIcons name="arrow-forward-ios" size={20} color={'#A1A1A1'} />
                             </TouchableOpacity>
                         </View>
+                        {/* SE O CLICKED (LÁ DO USESTATE) FOR TRUE, ENTÃO APARECERÁ O DINHEIRO, SE NÃO, NÃO VAI APARECER */}
                         { clicked ? (
                             <Text style={styles.textMoney}>R$ 1.356,98</Text>
                         ) : (
@@ -76,7 +83,7 @@ export function Home() {
                         }
                     </View>
 
-                    
+                    {/* AQUI É O COMPONENTE DO CARROSSEL, ONDE O USUÁRIO PODERÁ VER AS INFORMAÇÕES DE PIX E ETC */}
                     <View style={styles.carrossel}>
                         <Carrossel/>
                     </View>
