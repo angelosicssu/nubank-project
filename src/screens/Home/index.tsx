@@ -12,6 +12,7 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 export function Home() {
 
+    //AQUIS
     const [clicked, setCliked] = useState(false);
     const [click, setClick] = useState(false);
 
