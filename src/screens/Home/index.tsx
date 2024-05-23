@@ -1,18 +1,28 @@
-import React, { useState } from "react";
-import { SafeAreaView, View, Text, TouchableOpacity, ScrollView } from "react-native";
+import React, { useRef, useState, useLayoutEffect } from "react";
+import { SafeAreaView, View, Text, TouchableOpacity, ScrollView, TextInput } from "react-native";
 import { styles } from "./styles";
 import { Carrossel } from "../../components/Carrossel";
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import IconF from 'react-native-vector-icons/FontAwesome';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { News } from "../../components/News";
+import { OptionsModal } from "../OptionsModal";
+import { Modalize } from "react-native-modalize";
+import { GestureHandlerRootView } from 'react-native-gesture-handler'; 
 
 export function Home() {
 
     const [clicked, setCliked] = useState(false);
     const [click, setClick] = useState(false);
 
+    const modalizeRef = useRef<Modalize>(null);
+
+    function onOpen() {
+        modalizeRef.current?.open();
+    }
+
     return(
+        <GestureHandlerRootView style={{ flex: 1 }}>
         <SafeAreaView style={styles.container}>
             <ScrollView showsVerticalScrollIndicator={false}>
 
@@ -31,7 +41,7 @@ export function Home() {
                                 
                             </TouchableOpacity>
 
-                            <TouchableOpacity>
+                            <TouchableOpacity onPress={onOpen}>
                                 <Icon name="information-outline" size={25} color={'#F0F1F5'}/>
                             </TouchableOpacity>
                             
@@ -131,7 +141,13 @@ export function Home() {
                      <View style={styles.divider} />
 
                 </View>
+
+                <Modalize ref={modalizeRef} snapPoint={1500} adjustToContentHeight >
+                    <OptionsModal />
+                </Modalize>
+
             </ScrollView>
         </SafeAreaView>
+        </GestureHandlerRootView>
     )
 }

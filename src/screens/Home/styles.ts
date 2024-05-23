@@ -141,5 +141,5 @@ export const styles = StyleSheet.create({
     textButtonPagamentos: {
         fontSize: 16,
         fontWeight: 'bold'
-    }
+    },
 })
